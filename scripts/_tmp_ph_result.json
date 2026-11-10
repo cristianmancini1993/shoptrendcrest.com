@@ -1,0 +1,17 @@
+{
+  "name": {
+    "placeholder": "Nombre Apellido",
+    "value": "",
+    "label": "Nombre Apellido*"
+  },
+  "tel": {
+    "placeholder": "Teléfono",
+    "value": "",
+    "label": "Teléfono*"
+  },
+  "street-address": {
+    "placeholder": "Dirección",
+    "value": "",
+    "label": "Dirección*"
+  }
+}

@@ -1,0 +1,20 @@
+# -*- coding: utf-8 -*-
+"""LUNO™ — Adrice Network credentials per offer id."""
+
+UID = "019fd3ba-5142-7ab3-b965-8163a326c7f9"
+WEBHOOK = "https://hook.eu2.make.com/jjsjp6cl5zj8fq7pehjniq4edokmpbvx"
+ACTION = "https://offers.adricenetwork.com/forms/html/"
+SCRIPT = "https://offers.adricenetwork.com/forms/html/js-v2/"
+
+FORMS = {
+    "1912": {"lp": "1932", "key": "5e68d2a8a6ca4ca1f511e39a64e1e943858ee329"},
+    "1915": {"lp": "1935", "key": "ee927936c4405d2e0b75f5166861a97ddfdf9ce8"},
+    "2480": {"lp": "2505", "key": "e3f08e2ffec11563109788e01d24244d4f7be150"},
+    "3163": {"lp": "3197", "key": "58da2c2b87633ee4430cd5f3342f5fc7935ccfd7"},
+    "3167": {"lp": "3201", "key": "dfef13a537b06b7ae5e8d50a97bd05e8499f7b67"},
+    "3169": {"lp": "3203", "key": "2921bf78363e2342676f5e420c8699846d81f54c"},
+    "3910": {"lp": "3950", "key": "b4a6705c18b85cb539bf5c0531874f23e83ec6bc"},
+    "4321": {"lp": "4361", "key": "fc4c2ff3ca9f6e538c1c6f349475d1450281c19b"},
+}
+
+CPA = {oid: 13.0 for oid in FORMS}

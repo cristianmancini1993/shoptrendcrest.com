@@ -1,0 +1,28 @@
+﻿2289 cz LP HTTP 200 missing now '1 999 K─Н'; missing was '3 998 K─Н'; field order ['name', 'street-address', 'tel']
+2289 cz TYP HTTP 200 missing price '1 999 K─Н'
+2285 de LP HTTP 200 field order ['name', 'street-address', 'tel']
+2285 de TYP HTTP 200 OK
+2283 es LP HTTP 200 field order ['name', 'street-address', 'tel']
+2283 es TYP HTTP 200 OK
+1851 hr LP HTTP 200 OK
+1851 hr TYP HTTP 200 OK
+762 hu LP HTTP 200 field order ['name', 'tel', 'street-address', 'address-level2', 'postal-code']
+762 hu TYP HTTP 200 OK
+3990 it LP HTTP 200 OK
+3990 it TYP HTTP 200 OK
+4276 lt LP HTTP 200 field order ['name', 'street-address', 'tel']
+4276 lt TYP HTTP 200 OK
+3426 lv LP HTTP 200 field order ['name', 'street-address', 'tel']
+3426 lv TYP HTTP 200 OK
+2287 pl LP HTTP 200 missing now '299 z┼В'; missing was '598 z┼В'; field order ['name', 'street-address', 'tel']
+2287 pl TYP HTTP 200 missing price '299 z┼В'
+1673 pt LP HTTP 200 field order ['name', 'street-address', 'tel']
+1673 pt TYP HTTP 200 OK
+763 ro LP HTTP 200 field order ['name', 'tel', 'street-address', 'postal-code', 'address-level2']
+763 ro TYP HTTP 200 OK
+765 si LP HTTP 200 OK
+765 si TYP HTTP 200 OK
+4067 sk LP HTTP 200 field order ['name', 'street-address', 'tel']
+4067 sk TYP HTTP 200 OK
+
+Failed checks: 12

@@ -1,0 +1,163 @@
+/* Noreva overrides — base layout matches glacierair-landing.css (Treemax / Miorvella) */
+
+.h1-mobile-only{display:block}
+.h1-desktop-only{display:none}
+@media (min-width:960px){
+  .h1-mobile-only{display:none}
+  .h1-desktop-only{display:block}
+}
+
+.why-block .tag-row{align-items:flex-start}
+.why-block .tag{flex:0 0 auto}
+
+.cta-inline{max-width:420px;margin:22px auto 0}
+.why-block .cta-inline{margin-left:0;margin-right:auto}
+
+.compare-table-wrap{max-width:760px;margin:0 auto}
+
+.noreva-lp .testimonial .t-photo{
+  object-fit:cover;
+  object-position:center;
+  background:#f4f4f5;
+}
+
+body.ferrox-lp,
+body.cendora-lp,
+body.varmo-lp {
+  color: #000;
+}
+
+body.ferrox-lp .hero h1,
+body.cendora-lp .hero h1,
+body.varmo-lp .hero h1 {
+  color: #000;
+}
+
+body.ferrox-lp .hero .lead,
+body.cendora-lp .hero .lead,
+body.varmo-lp .hero .lead {
+  color: #000;
+}
+
+body.ferrox-lp .topbar,
+body.cendora-lp .topbar,
+body.varmo-lp .topbar {
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+body.ferrox-lp .stock-label .right,
+body.cendora-lp .stock-label .right,
+body.varmo-lp .stock-label .right {
+  color: var(--color-accent, #e2231a);
+  font-weight: 800;
+}
+
+@media (max-width: 959px) {
+  body.ferrox-lp section.hero.wrap,
+  body.cendora-lp section.hero.wrap,
+  body.varmo-lp section.hero.wrap {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  body.ferrox-lp .hero-copy,
+  body.cendora-lp .hero-copy,
+  body.varmo-lp .hero-copy {
+    width: 100%;
+  }
+
+  body.ferrox-lp .hero .gift-strip,
+  body.cendora-lp .hero .gift-strip,
+  body.varmo-lp .hero .gift-strip {
+    display: block;
+    width: 100%;
+    max-width: none;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 1.35;
+  }
+
+  body.ferrox-lp .hero .h1-mobile-only,
+  body.cendora-lp .hero .h1-mobile-only,
+  body.varmo-lp .hero .h1-mobile-only,
+  body.ferrox-lp .hero h1:not(.h1-desktop-only),
+  body.cendora-lp .hero h1:not(.h1-desktop-only),
+  body.varmo-lp .hero h1:not(.h1-desktop-only) {
+    font-size: 26px;
+    max-width: none;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+  }
+
+  body.ferrox-lp .hero .lead,
+  body.cendora-lp .hero .lead,
+  body.varmo-lp .hero .lead {
+    font-size: 15.5px;
+    max-width: none;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    line-height: 1.42;
+    letter-spacing: 0.018em;
+  }
+}
+
+.order-form.tm-order-form label{display:block;font-size:13px;font-weight:700;margin:0 0 5px;color:var(--color-text,#12151c)}
+.order-form.tm-order-form input{margin-bottom:12px}
+.order-form.tm-order-form br{display:none}
+.order-form.tm-order-form button[type="submit"]{
+  display:block;width:100%;background:var(--color-accent,#e2231a);color:#fff;border:none;
+  font-family:inherit;font-size:16px;font-weight:800;padding:17px;border-radius:8px;cursor:pointer;margin-top:4px;
+}
+
+/* Header logo on dark bars only — footer overrides in glacierair-landing.css */
+.noreva-lp .topbar .site-logo,
+.noreva-lp .site-header .site-logo {
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+.noreva-lp .topbar .site-logo .site-logo__text-primary,
+.noreva-lp .site-header .site-logo .site-logo__text-primary {
+  color: #fff;
+}
+.noreva-lp .topbar .site-logo .site-logo__text-accent,
+.noreva-lp .site-header .site-logo .site-logo__text-accent {
+  color: #f97316;
+}
+
+body.ferrox-lp .kit-subheading,
+body.cendora-lp .kit-subheading,
+body.varmo-lp .kit-subheading {
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin: 0 0 10px;
+  line-height: 1.35;
+}
+body.ferrox-lp .kit-subheading--gift,
+body.cendora-lp .kit-subheading--gift,
+body.varmo-lp .kit-subheading--gift {
+  margin-top: 16px;
+}
+body.ferrox-lp .kit-count-note,
+body.cendora-lp .kit-count-note,
+body.varmo-lp .kit-count-note {
+  font-size: 0.8rem;
+  color: #6b7280;
+  line-height: 1.45;
+  margin-top: 12px;
+}
+body.ferrox-lp .kit-list-main,
+body.cendora-lp .kit-list-main,
+body.varmo-lp .kit-list-main,
+body.ferrox-lp .kit-list-gift,
+body.cendora-lp .kit-list-gift,
+body.varmo-lp .kit-list-gift {
+  margin-bottom: 0;
+}

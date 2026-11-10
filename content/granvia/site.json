@@ -1,0 +1,9 @@
+{
+  "domain": "shoptrendcrest.com",
+  "product_slug": "granvia",
+  "product_name": "Granvia™",
+  "discount_percent": 50,
+  "source_landing": "it/granvia/index.html",
+  "source_thank_you": "it/granvia/thank-you.html",
+  "notes": "URL pattern: https://{domain}/{geo}/granvia-{offer}/"
+}

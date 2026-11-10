@@ -1,0 +1,128 @@
+[
+  {
+    "id": "1387",
+    "geo": "ro",
+    "lang": "ro",
+    "currency": "RON",
+    "price": 389,
+    "price_display": "389 lei",
+    "variant": "cendora-12"
+  },
+  {
+    "id": "1476",
+    "geo": "pt",
+    "lang": "pt",
+    "currency": "EUR",
+    "price": 99,
+    "price_display": "99 €",
+    "variant": "cendora-12"
+  },
+  {
+    "id": "1874",
+    "geo": "sk",
+    "lang": "sk",
+    "currency": "EUR",
+    "price": 89,
+    "price_display": "89 €",
+    "variant": "cendora-12"
+  },
+  {
+    "id": "1875",
+    "geo": "si",
+    "lang": "sl",
+    "currency": "EUR",
+    "price": 89,
+    "price_display": "89 €",
+    "variant": "cendora-12"
+  },
+  {
+    "id": "1876",
+    "geo": "hr",
+    "lang": "hr",
+    "currency": "EUR",
+    "price": 89,
+    "price_display": "89 €",
+    "variant": "cendora-12"
+  },
+  {
+    "id": "2409",
+    "geo": "hu",
+    "lang": "hu",
+    "currency": "HUF",
+    "price": 31999,
+    "price_display": "31 999 Ft",
+    "variant": "cendora-12"
+  },
+  {
+    "id": "3176",
+    "geo": "es",
+    "lang": "es",
+    "currency": "EUR",
+    "price": 89,
+    "price_display": "89 €",
+    "variant": "cendora-12"
+  },
+  {
+    "id": "3177",
+    "geo": "de",
+    "lang": "de",
+    "currency": "EUR",
+    "price": 109,
+    "price_display": "109 €",
+    "variant": "cendora-12"
+  },
+  {
+    "id": "3178",
+    "geo": "lt",
+    "lang": "lt",
+    "currency": "EUR",
+    "price": 99,
+    "price_display": "99 €",
+    "variant": "cendora-12"
+  },
+  {
+    "id": "3179",
+    "geo": "pl",
+    "lang": "pl",
+    "currency": "PLN",
+    "price": 449,
+    "price_display": "449 zł",
+    "variant": "cendora-12"
+  },
+  {
+    "id": "3251",
+    "geo": "cz",
+    "lang": "cs",
+    "currency": "CZK",
+    "price": 1999,
+    "price_display": "1 999 Kč",
+    "variant": "cendora-12"
+  },
+  {
+    "id": "4095",
+    "geo": "lv",
+    "lang": "lv",
+    "currency": "EUR",
+    "price": 99,
+    "price_display": "99 €",
+    "variant": "cendora-12"
+  },
+  {
+    "id": "4373",
+    "geo": "it",
+    "lang": "it",
+    "currency": "EUR",
+    "price": 169.9,
+    "price_display": "169,90 €",
+    "variant": "cendora-12"
+  },
+  {
+    "id": "1380",
+    "geo": "gr",
+    "lang": "el",
+    "currency": "EUR",
+    "price": 94,
+    "price_display": "94 €",
+    "variant": "cendora-12"
+  }
+]

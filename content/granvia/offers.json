@@ -1,0 +1,8 @@
+[
+  {"id": "3047", "geo": "es", "lang": "es", "currency": "EUR", "price": 89},
+  {"id": "3048", "geo": "pt", "lang": "pt", "currency": "EUR", "price": 89},
+  {"id": "3049", "geo": "de", "lang": "de", "currency": "EUR", "price": 149},
+  {"id": "3050", "geo": "lt", "lang": "lt", "currency": "EUR", "price": 99},
+  {"id": "3052", "geo": "hu", "lang": "hu", "currency": "HUF", "price": 31999},
+  {"id": "3053", "geo": "cz", "lang": "cs", "currency": "CZK", "price": 2199}
+]

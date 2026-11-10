@@ -1,0 +1,30 @@
+{
+  "2289-cz-LP": [],
+  "2289-cz-TYP": [],
+  "2285-de-LP": [],
+  "2285-de-TYP": [],
+  "2283-es-LP": [],
+  "2283-es-TYP": [],
+  "1851-hr-LP": [],
+  "1851-hr-TYP": [],
+  "762-hu-LP": [],
+  "762-hu-TYP": [],
+  "3990-it-LP": [],
+  "3990-it-TYP": [],
+  "4276-lt-LP": [],
+  "4276-lt-TYP": [],
+  "3426-lv-LP": [],
+  "3426-lv-TYP": [],
+  "2287-pl-LP": [],
+  "2287-pl-TYP": [],
+  "1673-pt-LP": [],
+  "1673-pt-TYP": [],
+  "763-ro-LP": [],
+  "763-ro-TYP": [],
+  "765-si-LP": [],
+  "765-si-TYP": [],
+  "4067-sk-LP": [],
+  "4067-sk-TYP": [
+    "exception: Page.goto: Timeout 60000ms exceeded.\nCall log:\n  - navigating to \"https://shoptrendcrest.com/sk/warmio-4067/thank-you/\", waiting until \"networkidle\"\n"
+  ]
+}

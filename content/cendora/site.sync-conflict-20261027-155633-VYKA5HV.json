@@ -1,0 +1,10 @@
+{
+  "domain": "shoptrendcrest.com",
+  "product_slug": "cendora",
+  "product_name": "CENDORA™",
+  "discount_percent": 50,
+  "default_kit_pieces": 12,
+  "source_landing": "it/cendora/index.html",
+  "source_thank_you": "it/cendora/thank-you.html",
+  "notes": "URL pattern: https://shoptrendcrest.com/{geo}/cendora-{offer}/"
+}
