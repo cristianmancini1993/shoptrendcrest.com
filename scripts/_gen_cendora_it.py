@@ -19,7 +19,7 @@ HOME_FOOTER_TY_BLOCK = m2.group(0)
 
 
 def domain_patch(html: str) -> str:
-    html = html.replace("AW-18437425584", "AW-18421302840")
+    html = html.replace("AW-18437425584", "AW-18510622150")
     html = html.replace("shopgearspot.com", "shoptrendcrest.com")
     html = html.replace("info@shopgearspot.com", "info@shoptrendcrest.com")
     return html

@@ -17,7 +17,7 @@ def brand(html: str) -> str:
     html = html.replace("shopterva.com", "shoptrendcrest.com")
     html = html.replace("info@shopterva.com", "info@shoptrendcrest.com")
     html = html.replace("shopterva", "shoptrendcrest")
-    html = html.replace("AW-18420045673", "AW-18421302840")
+    html = html.replace("AW-18420045673", "AW-18510622150")
     html = html.replace(
         "https://gadgetvistapro.com/wp-content/uploads/2026/07/reviewer-2.webp",
         "/assets/img/products/leafora/avatar-2.webp",
@@ -28,8 +28,8 @@ def brand(html: str) -> str:
         "Prodotti utili per la vita quotidiana, consegna in 24-48 ore con pagamento alla consegna.",
     )
     html = html.replace(
-        "AW-18421302840/Ylq6CM78vOscEOmurs9E",
-        "AW-18421302840/rPVUCJ-RiOwcELiM-89E",
+        "AW-18510622150/Ylq6CM78vOscEOmurs9E",
+        "AW-18510622150/rPVUCJ-RiOwcELiM-89E",
     )
     return html
 

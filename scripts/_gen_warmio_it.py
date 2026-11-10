@@ -51,7 +51,7 @@ def swap_footer(html: str) -> str:
 
 
 def adapt_landing(html: str) -> str:
-    html = html.replace("AW-18437425584", "AW-18421302840")
+    html = html.replace("AW-18437425584", "AW-18510622150")
     html = html.replace("VARMO", "WARMIO")
     html = html.replace("varmo", "warmio")
     html = html.replace("https://shopgearspot.com", "https://shoptrendcrest.com")
@@ -65,8 +65,8 @@ def adapt_landing(html: str) -> str:
 
 
 def adapt_ty(html: str) -> str:
-    html = html.replace("AW-18437425584", "AW-18421302840")
-    html = html.replace("AW-18437425584/iRw_CISgmfIcELCT09dE", "AW-18421302840/rPVUCJ-RiOwcELiM-89E")
+    html = html.replace("AW-18437425584", "AW-18510622150")
+    html = html.replace("AW-18437425584/iRw_CISgmfIcELCT09dE", "AW-18510622150/rPVUCJ-RiOwcELiM-89E")
     html = html.replace("VARMO", "WARMIO")
     html = html.replace("varmo", "warmio")
     html = html.replace("shopgearspot.com", "warmio.com")

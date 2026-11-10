@@ -117,7 +117,7 @@ def main() -> None:
   pixelId:   '',
   tiktokId:  '',
   capi:      '',
-  googleAds: 'AW-18421302840',
+  googleAds: 'AW-18510622150',
   consentDefault: '',
   tmfp:      true,
   value:     15,
