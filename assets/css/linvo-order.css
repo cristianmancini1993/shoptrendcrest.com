@@ -1,0 +1,29 @@
+/* VELICE™ order block only — scoped to .linvo-lp */
+.linvo-lp .order-section {
+  overflow-x: hidden;
+}
+.linvo-lp .order-section .wrap {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+}
+.linvo-lp .order-card {
+  width: 100%;
+  max-width: 480px;
+  box-sizing: border-box;
+}
+.linvo-lp .order-card .tm-order-form,
+.linvo-lp .order-card .cod-form {
+  width: 100%;
+  max-width: 100%;
+}
+.linvo-lp .cod-form .cod-form__input {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+}
+.linvo-lp .order-form__submit button,
+.linvo-lp .order-card .tm-order-form button[type="submit"] {
+  width: 100%;
+  max-width: 100%;
+}
