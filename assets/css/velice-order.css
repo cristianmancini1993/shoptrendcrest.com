@@ -1,0 +1,29 @@
+/* VELICE™ order block only — scoped to .velice-lp */
+.velice-lp .order-section {
+  overflow-x: hidden;
+}
+.velice-lp .order-section .wrap {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+}
+.velice-lp .order-card {
+  width: 100%;
+  max-width: 480px;
+  box-sizing: border-box;
+}
+.velice-lp .order-card .tm-order-form,
+.velice-lp .order-card .cod-form {
+  width: 100%;
+  max-width: 100%;
+}
+.velice-lp .cod-form .cod-form__input {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+}
+.velice-lp .order-form__submit button,
+.velice-lp .order-card .tm-order-form button[type="submit"] {
+  width: 100%;
+  max-width: 100%;
+}
