@@ -38,6 +38,21 @@ REQUIRED_ASSETS = (
     "orbimix-landing.js",
 )
 
+AC_MARKERS = (
+    "Climatizzatore",
+    "climatizzatore",
+    "Klimagerät",
+    "klimatiz",
+    "2000 W caldo",
+    "SPEGNI IL GAS",
+    "100 M²",
+    "100 m²",
+    "Termosifoni",
+    "Classe A++",
+    "classe A++",
+    "piastre in ceramica",
+)
+
 
 def expected_price_substr(price: float, currency: str) -> list[str]:
     if currency == "EUR":
@@ -88,6 +103,9 @@ def check_file(path: Path, offer: str, cfg: dict) -> list[str]:
         parts = expected_price_substr(cfg["price"], cfg["currency"])
         if parts and parts[0] and parts[0] not in text:
             issues.append(f"price {cfg['price']} not found in HTML")
+        ac_hits = [m for m in AC_MARKERS if m in text]
+        if ac_hits:
+            issues.append(f"AC copy leftovers: {ac_hits[0]}" + (f" (+{len(ac_hits)-1})" if len(ac_hits) > 1 else ""))
 
     if path.name == "thank-you.html":
         ty = f"https://shoptrendcrest.com/{geo}/{slug}/thank-you.html"

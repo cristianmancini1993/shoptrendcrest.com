@@ -61,20 +61,20 @@ SKIP_REPLACE_KEYS = frozenset({
 })
 
 
-def load_it_strings() -> dict:
+def load_it_ref_strings() -> dict:
+    """Italian literals still present in it/linvo/ templates (search side of i18n replace)."""
     spec = importlib.util.spec_from_file_location(
-        "_linvo_it_strings",
-        Path(__file__).with_name("_linvo_it_strings.py"),
+        "_linvo_it_ref_strings",
+        Path(__file__).with_name("_linvo_it_ref_strings.py"),
     )
     mod = importlib.util.module_from_spec(spec)
     assert spec.loader is not None
     spec.loader.exec_module(mod)
-    return mod.IT_STRINGS
+    return mod.IT_REF_STRINGS
 
 
 def load_translations() -> dict[str, dict]:
     loc_dir = ROOT / "content/linvo/locales"
-    it_raw = load_it_strings()
     out: dict[str, dict] = {"it": json.loads((loc_dir / "it.json").read_text(encoding="utf-8"))}
     for path in sorted(loc_dir.glob("*.json")):
         if path.stem == "it":
@@ -503,7 +503,7 @@ def main() -> int:
 
     it_landing = (ROOT / "it/linvo/landing.html").read_text(encoding="utf-8")
     it_ty = (ROOT / "it/linvo/thank-you.html").read_text(encoding="utf-8")
-    it_by_key = load_it_strings()
+    it_by_key = load_it_ref_strings()
     ref_ctx = fmt_ctx(REF_NOW, "EUR")
     it_replace = build_it_replace_map(dict(it_by_key), ref_ctx)
 
