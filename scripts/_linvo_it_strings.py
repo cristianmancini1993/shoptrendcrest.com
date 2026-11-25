@@ -112,7 +112,7 @@ IT_STRINGS: dict[str, str | list[str] | tuple[str, ...]] = {
   "cmp_gas_maint": "Assistenza e filtri programmati",
   "cmp_linvo_maint": "Pulizia semplice, senza tecnico",
   # — testimonials —
-  "testimonials_h2": "Cosa dicono chi ha messo via lo stendino",
+  "testimonials_h2": "Cosa dice chi ha messo via lo stendino",
   "testimonials_eyebrow": "★ 4,8/5 · Acquisto verificato",
   "rev1_h": "Tre figli — in salotto non c'è più lo stendino.",
   "rev1_p": "«Ho tre figli e d'inverno lo stendino era sempre pieno in salotto. Butto dentro tutto dopo la lavatrice e in 15 minuti è asciutto. Non torno più allo stendino neanche morta.»",

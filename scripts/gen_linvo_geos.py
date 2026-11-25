@@ -353,8 +353,19 @@ def render_landing(
         count=1,
     )
 
+    kit_keys = {f"kit_li{n}" for n in range(1, 7)}
+    for n in range(6, 0, -1):
+        key = f"kit_li{n}"
+        it_val = it_by_key.get(key)
+        if key not in tr or not isinstance(it_val, str):
+            continue
+        it_text = fill_template(it_val, ref_ctx)
+        loc = fill_template(tr[key], ctx)
+        if it_text in html:
+            html = html.replace(it_text, loc, 1)
+
     for it_text, key in sorted(it_replace.items(), key=lambda x: -len(x[0])):
-        if key not in tr:
+        if key in kit_keys or key not in tr:
             continue
         loc = fill_template(tr[key], ctx) if isinstance(tr[key], str) else tr[key]
         if isinstance(loc, str) and it_text in html:
