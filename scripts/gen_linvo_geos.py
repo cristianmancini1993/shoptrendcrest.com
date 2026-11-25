@@ -145,19 +145,38 @@ def author_line(tr: dict, n: int) -> str:
     return f"{tr[f'author{n}_name']} — {tr[f'author{n}_city']}, {tr[f'author{n}_suffix']}"
 
 
+def hero_price_parts(amount: float, currency: str) -> tuple[str, str]:
+    """Split formatted price for bf-pn + <small> (full number, currency label)."""
+    if currency == "HUF":
+        whole = int(round(amount))
+        return f"{whole:,}".replace(",", " "), "Ft"
+    if currency == "CZK":
+        whole = int(round(amount))
+        return f"{whole:,}".replace(",", " "), "Kč"
+    if currency == "PLN":
+        if abs(amount - round(amount)) < 0.001:
+            return str(int(round(amount))), "zł"
+        whole = int(amount)
+        frac = int(round((amount - whole) * 100))
+        return f"{whole},{frac:02d}", "zł"
+    if abs(amount - round(amount)) < 0.001:
+        return str(int(round(amount))), "€"
+    return f"{amount:.2f}".replace(".", ","), "€"
+
+
 def patch_price_nodes(html: str, now: float, currency: str) -> str:
     was = was_price(now)
     now_s = fmt_price(now, currency)
     was_s = fmt_price(was, currency)
     save_s = fmt_price(now * 0 + (was - now), currency)
 
-    now_num = re.sub(r"[^\d]", "", now_s.split()[0]) if currency != "EUR" else (
-        str(int(round(now))) if abs(now - round(now)) < 0.001 else f"{now:.2f}".replace(".", ",")
+    now_num, curr_suffix = hero_price_parts(now, currency)
+    html = re.sub(
+        r'<span class="bf-p-new"><span class="bf-pn">[^<]*</span><small>[^<]*</small>',
+        f'<span class="bf-p-new"><span class="bf-pn">{now_num}</span><small>{curr_suffix}</small>',
+        html,
+        count=1,
     )
-    if currency == "EUR" and abs(now - round(now)) >= 0.001:
-        now_num = f"{now:.2f}".replace(".", ",")
-
-    html = re.sub(r'<span class="bf-pn">[^<]+</span>', f'<span class="bf-pn">{now_num}</span>', html)
     html = re.sub(r'<span class="bf-p-old">[^<]*</span>', f'<span class="bf-p-old">{was_s}</span>', html)
     def _disc_repl(m: re.Match[str]) -> str:
         return (
@@ -209,6 +228,12 @@ def patch_price_nodes(html: str, now: float, currency: str) -> str:
 
 
 def apply_footer(html: str, tr: dict, geo: str) -> str:
+    top = tr.get("footer_powered_top")
+    if top:
+        html = html.replace(
+            "<p class=\"site-footer__top-meta\">shoptrendcrest.com — Offerto da CAPITALADV S.R.L.</p>",
+            f'<p class="site-footer__top-meta">{top}</p>',
+        )
     html = html.replace(
         "Prodotti selezionati per casa, giardino e vita quotidiana. Pagamento alla consegna in 18 paesi europei.",
         tr.get("footer_tagline", ""),
