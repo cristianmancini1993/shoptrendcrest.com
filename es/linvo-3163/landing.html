@@ -120,33 +120,25 @@ window.SITE_CONFIG = {
     <div class="order-card">
       <h2>Completa tu pedido — LINVO™ por 79 €</h2>
       <p>Deja tu nombre, teléfono y dirección. Te llamamos en menos de 24 horas para confirmar la entrega. Pagas al mensajero solo al recibir el paquete.</p>
-      <form class="tm-order-form order-form cod-form" action="https://offers.adricenetwork.com/forms/html/" method="post" novalidate>
-        <div class="cod-form__field">
-          <label class="cod-form__label" for="name">Nombre Apellido*</label>
-          <input id="name" class="cod-form__input" type="text" name="name" autocomplete="name" placeholder="María García" required>
-          <span class="cod-form__error">Introduce tu nombre y apellido (al menos 3 caracteres)</span>
-        </div>
-        <div class="cod-form__field">
-          <label class="cod-form__label" for="tel">Teléfono*</label>
-          <input id="tel" class="cod-form__input" type="tel" name="tel" autocomplete="tel" placeholder="+34 612 345 678" required>
-          <span class="cod-form__error">Introduce un número de teléfono válido</span>
-        </div>
-        <div class="cod-form__field">
-          <label class="cod-form__label" for="street-address">Dirección*</label>
-          <input id="street-address" class="cod-form__input" type="text" name="street-address" autocomplete="street-address" placeholder="Calle Mayor 15, 28013 Madrid" required>
-          <span class="cod-form__error">Introduce una dirección de entrega completa</span>
-        </div>
-        <input name="uid" type="hidden" value="019fd3ba-5142-7ab3-b965-8163a326c7f9" />
-        <input name="offer" type="hidden" value="3163" />
-        <input name="lp" type="hidden" value="3197" />
-        <input name="thankyoupage" type="hidden" value="https://shoptrendcrest.com/es/linvo-3163/thank-you.html"/>
-        <input name="webhook" type="hidden" value="https://hook.eu2.make.com/jjsjp6cl5zj8fq7pehjniq4edokmpbvx"/>
-        <input name="_key" type="hidden" value="58da2c2b87633ee4430cd5f3342f5fc7935ccfd7" />
-        <div class="order-form__submit">
-          <button name="submit" type="submit" class="cta-btn">Haz tu pedido</button>
-        </div>
-        <script src="https://offers.adricenetwork.com/forms/html/js-v2/" async></script>
-      </form>
+      <form class="tm-order-form order-form" action="https://offers.adricenetwork.com/forms/html/" method="post">
+<label for="name">Nombre Apellido*</label>
+<input id="name" type="text" name="name" autocomplete="name" placeholder="María García" required><br>
+<label for="street-address">Dirección*</label>
+<input id="street-address" type="text" name="street-address" autocomplete="street-address" placeholder="Calle Mayor 15, 28013 Madrid" required><br>
+<label for="tel">Teléfono*</label>
+<input id="tel" type="tel" name="tel" autocomplete="tel" placeholder="+34 612 345 678" required><br>
+<input name="uid" type="hidden" value="019fd3ba-5142-7ab3-b965-8163a326c7f9" />
+<input name="offer" type="hidden" value="3163" />
+<input name="lp" type="hidden" value="3197" />
+<input name="thankyoupage" type="hidden" value="https://shoptrendcrest.com/es/linvo-3163/thank-you.html"/>
+<input name="webhook" type="hidden" value="https://hook.eu2.make.com/srey7bhi9b1qapk46soc1q9jpb6iwexk"/>
+<input name="_key" type="hidden" value="58da2c2b87633ee4430cd5f3342f5fc7935ccfd7" />
+
+<div style="margin-top: 10px; text-align: center">
+    <button name="submit" type="submit">Haz tu pedido</button>
+</div>
+<script src="https://offers.adricenetwork.com/forms/html/js-v2/" async></script>
+</form>
       <p class="form-note">Sin pago anticipado · Solo 79 € en efectivo · Pagas solo al recibirlo</p>
     </div>
   </div>

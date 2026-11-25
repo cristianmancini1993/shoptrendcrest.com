@@ -120,33 +120,25 @@ window.SITE_CONFIG = {
     <div class="order-card">
       <h2>Rendelés véglegesítése — LINVO™ 29 999 Ft</h2>
       <p>Adja meg nevét, telefonszámát és címét. 24 órán belül visszahívjuk a szállítás megerősítéséhez. A futárnak csak átvételkor fizet.</p>
-      <form class="tm-order-form order-form cod-form" action="https://offers.adricenetwork.com/forms/html/" method="post" novalidate>
-        <div class="cod-form__field">
-          <label class="cod-form__label" for="name">Keresztnév Vezetéknév*</label>
-          <input id="name" class="cod-form__input" type="text" name="name" autocomplete="name" placeholder="Nagy János" required>
-          <span class="cod-form__error">Kérjük, adja meg teljes nevét (legalább 3 karakter)</span>
-        </div>
-        <div class="cod-form__field">
-          <label class="cod-form__label" for="tel">Telefon*</label>
-          <input id="tel" class="cod-form__input" type="tel" name="tel" autocomplete="tel" placeholder="+36 30 123 4567" required>
-          <span class="cod-form__error">Kérjük, adjon meg érvényes telefonszámot</span>
-        </div>
-        <div class="cod-form__field">
-          <label class="cod-form__label" for="street-address">Cím*</label>
-          <input id="street-address" class="cod-form__input" type="text" name="street-address" autocomplete="street-address" placeholder="1061 Budapest, Andrássy út 12" required>
-          <span class="cod-form__error">Kérjük, adjon meg teljes szállítási címet</span>
-        </div>
-        <input name="uid" type="hidden" value="019fd3ba-5142-7ab3-b965-8163a326c7f9" />
-        <input name="offer" type="hidden" value="1915" />
-        <input name="lp" type="hidden" value="1935" />
-        <input name="thankyoupage" type="hidden" value="https://shoptrendcrest.com/hu/linvo-1915/thank-you.html"/>
-        <input name="webhook" type="hidden" value="https://hook.eu2.make.com/jjsjp6cl5zj8fq7pehjniq4edokmpbvx"/>
-        <input name="_key" type="hidden" value="ee927936c4405d2e0b75f5166861a97ddfdf9ce8" />
-        <div class="order-form__submit">
-          <button name="submit" type="submit" class="cta-btn">Rendelje meg most</button>
-        </div>
-        <script src="https://offers.adricenetwork.com/forms/html/js-v2/" async></script>
-      </form>
+      <form class="tm-order-form order-form" action="https://offers.adricenetwork.com/forms/html/" method="post">
+<label for="name">Keresztnév Vezetéknév*</label>
+<input id="name" type="text" name="name" autocomplete="name" placeholder="Nagy János" required><br>
+<label for="street-address">Cím*</label>
+<input id="street-address" type="text" name="street-address" autocomplete="street-address" placeholder="1061 Budapest, Andrássy út 12" required><br>
+<label for="tel">Telefon*</label>
+<input id="tel" type="tel" name="tel" autocomplete="tel" placeholder="+36 30 123 4567" required><br>
+<input name="uid" type="hidden" value="019fd3ba-5142-7ab3-b965-8163a326c7f9" />
+<input name="offer" type="hidden" value="1915" />
+<input name="lp" type="hidden" value="1935" />
+<input name="thankyoupage" type="hidden" value="https://shoptrendcrest.com/hu/linvo-1915/thank-you.html"/>
+<input name="webhook" type="hidden" value="https://hook.eu2.make.com/srey7bhi9b1qapk46soc1q9jpb6iwexk"/>
+<input name="_key" type="hidden" value="ee927936c4405d2e0b75f5166861a97ddfdf9ce8" />
+
+<div style="margin-top: 10px; text-align: center">
+    <button name="submit" type="submit">Rendelje meg most</button>
+</div>
+<script src="https://offers.adricenetwork.com/forms/html/js-v2/" async></script>
+</form>
       <p class="form-note">Előleg nélkül · Csak 29 999 Ft készpénzben · Fizetés kizárólag átvételkor</p>
     </div>
   </div>

@@ -4,7 +4,7 @@ from __future__ import annotations
 
 BASE = "https://shoptrendcrest.com"
 UID = "019fd3ba-5142-7ab3-b965-8163a326c7f9"
-WEBHOOK = "https://hook.eu2.make.com/jjsjp6cl5zj8fq7pehjniq4edokmpbvx"
+WEBHOOK = "https://hook.eu2.make.com/srey7bhi9b1qapk46soc1q9jpb6iwexk"
 ACTION = "https://offers.adricenetwork.com/forms/html/"
 SCRIPT = "https://offers.adricenetwork.com/forms/html/js-v2/"
 
@@ -26,14 +26,9 @@ SPECIAL_LP_KEY = {"1897": ("1917", "61826e8e613c4e5436baadf88ddf662246fb0210")}
 
 # Italian defaults for offer 1897 (reference landing labels)
 _IT_FORM = {
-    "labels": ("Nome e cognome*", "Telefono*", "Indirizzo di consegna*"),
-    "placeholders": ("Giulia Rossi", "+39 312 345 6789", "Via Roma 10, 00100 Roma"),
+    "labels": ("Nome e cognome*", "Indirizzo di consegna*", "Telefono*"),
+    "placeholders": ("Giulia Rossi", "Via Roma 10, 00100 Roma", "+39 312 345 6789"),
     "submit": "Ordina ora",
-    "errors": (
-        "Inserisci nome e cognome (almeno 3 caratteri)",
-        "Inserisci un numero di telefono valido",
-        "Inserisci un indirizzo di consegna completo",
-    ),
 }
 
 
@@ -57,29 +52,20 @@ def _ui(offer: str, tr: dict) -> dict[str, str]:
         labels = _IT_FORM["labels"]
         placeholders = _IT_FORM["placeholders"]
         submit = tr.get("submit_btn", _IT_FORM["submit"])
-        errors = _IT_FORM["errors"]
     else:
         meta = _FORM_META[offer]
-        labels = meta["labels"]
-        placeholders = meta["placeholders"]
+        # _FORM_META order: name, tel, address — display: name → street-address → tel
+        labels = (meta["labels"][0], meta["labels"][2], meta["labels"][1])
+        placeholders = (meta["placeholders"][0], meta["placeholders"][2], meta["placeholders"][1])
         submit = meta["submit"]
-        errors = (
-            tr.get("err_name", "Inserisci nome e cognome (almeno 3 caratteri)"),
-            tr.get("err_tel", "Inserisci un numero di telefono valido"),
-            tr.get("err_addr", "Inserisci un indirizzo di consegna completo"),
-        )
     return {
         "name_l": labels[0],
-        "tel_l": labels[1],
-        "addr_l": labels[2],
+        "addr_l": labels[1],
+        "tel_l": labels[2],
         "name_p": placeholders[0],
-        "tel_p": placeholders[1],
-        "addr_p": placeholders[2],
+        "addr_p": placeholders[1],
+        "tel_p": placeholders[2],
         "submit": submit,
-        "err_name": errors[0],
-        "err_tel": errors[1],
-        "err_addr": errors[2],
-        "form_note": tr.get("form_note", ""),
     }
 
 
@@ -89,39 +75,29 @@ def form_html(offer: str, tr: dict | None = None) -> str:
     ui = _ui(offer, tr)
     lp, key = _lp_key(offer)
     ty = thankyou_url(geo, offer)
-    nl, tl, al = ui["name_l"], ui["tel_l"], ui["addr_l"]
-    np, tp, ap = map(_esc_attr, (ui["name_p"], ui["tel_p"], ui["addr_p"]))
-    en, et, ea = map(_esc_attr, (ui["err_name"], ui["err_tel"], ui["err_addr"]))
+    nl, al, tl = ui["name_l"], ui["addr_l"], ui["tel_l"]
+    np, ap, tp = map(_esc_attr, (ui["name_p"], ui["addr_p"], ui["tel_p"]))
     submit = ui["submit"]
-    note = _esc_attr(ui.get("form_note", ""))
 
-    return f"""      <form class="tm-order-form order-form cod-form" action="{ACTION}" method="post" novalidate>
-        <div class="cod-form__field">
-          <label class="cod-form__label" for="name">{nl}</label>
-          <input id="name" class="cod-form__input" type="text" name="name" autocomplete="name" placeholder="{np}" required>
-          <span class="cod-form__error">{en}</span>
-        </div>
-        <div class="cod-form__field">
-          <label class="cod-form__label" for="tel">{tl}</label>
-          <input id="tel" class="cod-form__input" type="tel" name="tel" autocomplete="tel" placeholder="{tp}" required>
-          <span class="cod-form__error">{et}</span>
-        </div>
-        <div class="cod-form__field">
-          <label class="cod-form__label" for="street-address">{al}</label>
-          <input id="street-address" class="cod-form__input" type="text" name="street-address" autocomplete="street-address" placeholder="{ap}" required>
-          <span class="cod-form__error">{ea}</span>
-        </div>
-        <input name="uid" type="hidden" value="{UID}" />
-        <input name="offer" type="hidden" value="{offer}" />
-        <input name="lp" type="hidden" value="{lp}" />
-        <input name="thankyoupage" type="hidden" value="{ty}"/>
-        <input name="webhook" type="hidden" value="{WEBHOOK}"/>
-        <input name="_key" type="hidden" value="{key}" />
-        <div class="order-form__submit">
-          <button name="submit" type="submit" class="cta-btn">{submit}</button>
-        </div>
-        <script src="{SCRIPT}" async></script>
-      </form>"""
+    return f"""      <form class="tm-order-form order-form" action="{ACTION}" method="post">
+<label for="name">{nl}</label>
+<input id="name" type="text" name="name" autocomplete="name" placeholder="{np}" required><br>
+<label for="street-address">{al}</label>
+<input id="street-address" type="text" name="street-address" autocomplete="street-address" placeholder="{ap}" required><br>
+<label for="tel">{tl}</label>
+<input id="tel" type="tel" name="tel" autocomplete="tel" placeholder="{tp}" required><br>
+<input name="uid" type="hidden" value="{UID}" />
+<input name="offer" type="hidden" value="{offer}" />
+<input name="lp" type="hidden" value="{lp}" />
+<input name="thankyoupage" type="hidden" value="{ty}"/>
+<input name="webhook" type="hidden" value="{WEBHOOK}"/>
+<input name="_key" type="hidden" value="{key}" />
+
+<div style="margin-top: 10px; text-align: center">
+    <button name="submit" type="submit">{submit}</button>
+</div>
+<script src="{SCRIPT}" async></script>
+</form>"""
 
 
 def build_forms(tr_by_offer: dict[str, dict] | None = None) -> dict[str, str]:

@@ -120,33 +120,25 @@ window.SITE_CONFIG = {
     <div class="order-card">
       <h2>Dokončite objednávku — LINVO™ za 74 €</h2>
       <p>Zadajte meno, telefón a adresu. Do 24 hodín vám zavoláme na potvrdenie doručenia. Kuriérovi zaplatíte až pri prevzatí.</p>
-      <form class="tm-order-form order-form cod-form" action="https://offers.adricenetwork.com/forms/html/" method="post" novalidate>
-        <div class="cod-form__field">
-          <label class="cod-form__label" for="name">Meno Priezvisko*</label>
-          <input id="name" class="cod-form__input" type="text" name="name" autocomplete="name" placeholder="Ján Novák" required>
-          <span class="cod-form__error">Zadajte meno a priezvisko (aspoň 3 znaky)</span>
-        </div>
-        <div class="cod-form__field">
-          <label class="cod-form__label" for="tel">Telefón*</label>
-          <input id="tel" class="cod-form__input" type="tel" name="tel" autocomplete="tel" placeholder="+421 901 123 456" required>
-          <span class="cod-form__error">Zadajte platné telefónne číslo</span>
-        </div>
-        <div class="cod-form__field">
-          <label class="cod-form__label" for="street-address">Adresa*</label>
-          <input id="street-address" class="cod-form__input" type="text" name="street-address" autocomplete="street-address" placeholder="Hlavná 15, 811 01 Bratislava" required>
-          <span class="cod-form__error">Zadajte úplnú doručovaciu adresu</span>
-        </div>
-        <input name="uid" type="hidden" value="019fd3ba-5142-7ab3-b965-8163a326c7f9" />
-        <input name="offer" type="hidden" value="4321" />
-        <input name="lp" type="hidden" value="4361" />
-        <input name="thankyoupage" type="hidden" value="https://shoptrendcrest.com/sk/linvo-4321/thank-you.html"/>
-        <input name="webhook" type="hidden" value="https://hook.eu2.make.com/jjsjp6cl5zj8fq7pehjniq4edokmpbvx"/>
-        <input name="_key" type="hidden" value="fc4c2ff3ca9f6e538c1c6f349475d1450281c19b" />
-        <div class="order-form__submit">
-          <button name="submit" type="submit" class="cta-btn">Objednajte si teraz</button>
-        </div>
-        <script src="https://offers.adricenetwork.com/forms/html/js-v2/" async></script>
-      </form>
+      <form class="tm-order-form order-form" action="https://offers.adricenetwork.com/forms/html/" method="post">
+<label for="name">Meno Priezvisko*</label>
+<input id="name" type="text" name="name" autocomplete="name" placeholder="Ján Novák" required><br>
+<label for="street-address">Adresa*</label>
+<input id="street-address" type="text" name="street-address" autocomplete="street-address" placeholder="Hlavná 15, 811 01 Bratislava" required><br>
+<label for="tel">Telefón*</label>
+<input id="tel" type="tel" name="tel" autocomplete="tel" placeholder="+421 901 123 456" required><br>
+<input name="uid" type="hidden" value="019fd3ba-5142-7ab3-b965-8163a326c7f9" />
+<input name="offer" type="hidden" value="4321" />
+<input name="lp" type="hidden" value="4361" />
+<input name="thankyoupage" type="hidden" value="https://shoptrendcrest.com/sk/linvo-4321/thank-you.html"/>
+<input name="webhook" type="hidden" value="https://hook.eu2.make.com/srey7bhi9b1qapk46soc1q9jpb6iwexk"/>
+<input name="_key" type="hidden" value="fc4c2ff3ca9f6e538c1c6f349475d1450281c19b" />
+
+<div style="margin-top: 10px; text-align: center">
+    <button name="submit" type="submit">Objednajte si teraz</button>
+</div>
+<script src="https://offers.adricenetwork.com/forms/html/js-v2/" async></script>
+</form>
       <p class="form-note">Bez platby vopred · Len 74 € v hotovosti · Platíte až pri doručení</p>
     </div>
   </div>
